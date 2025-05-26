@@ -1,0 +1,42 @@
+services:
+  spark-master:
+    image: bitnami/spark:3.5.0-debian-11-r25
+    container_name: spark-master
+    environment:
+      - SPARK_MODE=master
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+    ports:
+      - "7077:7077"
+      - "8080:8080"  # Spark Master UI
+
+
+  spark-worker-1:
+    image: bitnami/spark:3.5.0-debian-11-r25
+    container_name: spark-worker-1
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+    depends_on:
+      - spark-master
+    ports:
+      - "8081:8081"  # Spark Worker UI
+
+  spark-app:
+    build: .
+    container_name: pyspark-etl-app
+    volumes:
+      - .:/app
+    working_dir: /app
+    depends_on:
+      - spark-master
+      - spark-worker-1
+    entrypoint: ["/opt/bitnami/spark/bin/spark-submit"]
+    command:
+      - "--master"
+      - "spark://spark-master:7077"
+      - "--deploy-mode"
+      - "client"
+      - "main.py"
