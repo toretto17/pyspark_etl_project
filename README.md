@@ -99,7 +99,3 @@ Contributions are welcome! Please fork the repo and open a pull request for any 
 
 ---
 
-## License
-
-[Specify your license here, e.g., MIT License]
-
