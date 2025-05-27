@@ -1,2 +1,4 @@
-pyspark==3.5.0
+pyspark==3.4.2
 pandas
+delta-spark==2.4.0
+findspark

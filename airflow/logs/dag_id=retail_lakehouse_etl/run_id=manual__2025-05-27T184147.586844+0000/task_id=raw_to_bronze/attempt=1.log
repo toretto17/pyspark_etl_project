@@ -1,0 +1,45 @@
+[2025-05-27T18:41:48.452+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: retail_lakehouse_etl.raw_to_bronze manual__2025-05-27T18:41:47.586844+00:00 [queued]>
+[2025-05-27T18:41:48.459+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: retail_lakehouse_etl.raw_to_bronze manual__2025-05-27T18:41:47.586844+00:00 [queued]>
+[2025-05-27T18:41:48.459+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-05-27T18:41:48.472+0000] {taskinstance.py:2191} INFO - Executing <Task(DockerOperator): raw_to_bronze> on 2025-05-27 18:41:47.586844+00:00
+[2025-05-27T18:41:48.476+0000] {standard_task_runner.py:60} INFO - Started process 170 to run task
+[2025-05-27T18:41:48.479+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'retail_lakehouse_etl', 'raw_to_bronze', 'manual__2025-05-27T18:41:47.586844+00:00', '--job-id', '86', '--raw', '--subdir', 'DAGS_FOLDER/retail_lakehouse_dag.py', '--cfg-path', '/tmp/tmpmqgcp630']
+[2025-05-27T18:41:48.482+0000] {standard_task_runner.py:88} INFO - Job 86: Subtask raw_to_bronze
+[2025-05-27T18:41:48.498+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-27T18:41:48.536+0000] {task_command.py:423} INFO - Running <TaskInstance: retail_lakehouse_etl.raw_to_bronze manual__2025-05-27T18:41:47.586844+00:00 [running]> on host 3c51f831ee29
+[2025-05-27T18:41:48.608+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='retail_lakehouse_etl' AIRFLOW_CTX_TASK_ID='raw_to_bronze' AIRFLOW_CTX_EXECUTION_DATE='2025-05-27T18:41:47.586844+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-27T18:41:47.586844+00:00'
+[2025-05-27T18:41:48.658+0000] {docker.py:359} INFO - Starting docker container from image pyspark-etl-app
+[2025-05-27T18:41:48.674+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/api/client.py", line 265, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.10/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http+docker://localhost/v1.47/containers/create?name=raw_to_bronze
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/docker/operators/docker.py", line 502, in execute
+    return self._run_image()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/docker/operators/docker.py", line 376, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/docker/operators/docker.py", line 391, in _run_image_with_mounts
+    self.container = self.cli.create_container(
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/api/container.py", line 439, in create_container
+    return self.create_container_from_config(config, name, platform)
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/api/container.py", line 456, in create_container_from_config
+    return self._result(res, True)
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/api/client.py", line 271, in _result
+    self._raise_for_status(response)
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/api/client.py", line 267, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.APIError: 400 Client Error for http+docker://localhost/v1.47/containers/create?name=raw_to_bronze: Bad Request ("invalid mount config for type "bind": bind source path does not exist: /mnt/c/Users/rahul.rs/Desktop/pyspark-etl-project")
+[2025-05-27T18:41:48.682+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=retail_lakehouse_etl, task_id=raw_to_bronze, execution_date=20250527T184147, start_date=20250527T184148, end_date=20250527T184148
+[2025-05-27T18:41:48.692+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 86 for task raw_to_bronze (400 Client Error for http+docker://localhost/v1.47/containers/create?name=raw_to_bronze: Bad Request ("invalid mount config for type "bind": bind source path does not exist: /mnt/c/Users/rahul.rs/Desktop/pyspark-etl-project"); 170)
+[2025-05-27T18:41:48.714+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-05-27T18:41:48.733+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

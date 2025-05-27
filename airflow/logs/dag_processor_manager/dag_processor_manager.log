@@ -1,0 +1,853 @@
+[2025-05-27T17:28:25.503+0000] {manager.py:469} INFO - Processing files using up to 2 processes at a time 
+[2025-05-27T17:28:25.505+0000] {manager.py:470} INFO - Process each file at most once every 30 seconds
+[2025-05-27T17:28:25.507+0000] {manager.py:471} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-05-27T17:28:25.509+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-05-27T17:28:25.518+0000] {manager.py:741} INFO - There are 0 files in /opt/airflow/dags
+[2025-05-27T17:33:25.563+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-05-27T17:33:25.566+0000] {manager.py:741} INFO - There are 0 files in /opt/airflow/dags
+[2025-05-27T17:37:26.996+0000] {manager.py:451} INFO - Exiting gracefully upon receiving signal 15
+[2025-05-27T17:37:36.117+0000] {manager.py:469} INFO - Processing files using up to 2 processes at a time 
+[2025-05-27T17:37:36.118+0000] {manager.py:470} INFO - Process each file at most once every 30 seconds
+[2025-05-27T17:37:36.119+0000] {manager.py:471} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-05-27T17:37:36.120+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-05-27T17:37:36.124+0000] {manager.py:741} INFO - There are 0 files in /opt/airflow/dags
+[2025-05-27T17:39:52.580+0000] {manager.py:451} INFO - Exiting gracefully upon receiving signal 15
+[2025-05-27T17:40:40.990+0000] {manager.py:469} INFO - Processing files using up to 2 processes at a time 
+[2025-05-27T17:40:40.992+0000] {manager.py:470} INFO - Process each file at most once every 30 seconds
+[2025-05-27T17:40:40.994+0000] {manager.py:471} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-05-27T17:40:40.996+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-05-27T17:40:41.001+0000] {manager.py:741} INFO - There are 0 files in /opt/airflow/dags
+[2025-05-27T17:47:26.405+0000] {manager.py:469} INFO - Processing files using up to 2 processes at a time 
+[2025-05-27T17:47:26.407+0000] {manager.py:470} INFO - Process each file at most once every 30 seconds
+[2025-05-27T17:47:26.408+0000] {manager.py:471} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-05-27T17:47:26.409+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-05-27T17:47:26.421+0000] {manager.py:741} INFO - There are 1 files in /opt/airflow/dags
+[2025-05-27T17:47:26.761+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/retail_lakehouse_dag.py    164  0.05s             0           0
+================================================================================
+[2025-05-27T17:47:57.126+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    169  0.00s             0           1  0.12s           2025-05-27T17:47:26
+================================================================================
+[2025-05-27T17:48:27.541+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    174  0.00s             0           1  0.07s           2025-05-27T17:47:57
+================================================================================
+[2025-05-27T17:48:57.949+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    179  0.00s             0           1  0.08s           2025-05-27T17:48:27
+================================================================================
+[2025-05-27T17:49:28.317+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    184  0.00s             0           1  0.06s           2025-05-27T17:48:58
+================================================================================
+[2025-05-27T17:49:58.776+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    189  0.00s             0           1  0.06s           2025-05-27T17:49:28
+================================================================================
+[2025-05-27T17:50:29.167+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    194  0.00s             0           1  0.08s           2025-05-27T17:49:58
+================================================================================
+[2025-05-27T17:50:59.563+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    199  0.00s             0           1  0.07s           2025-05-27T17:50:29
+================================================================================
+[2025-05-27T17:51:29.950+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    204  0.00s             0           1  0.09s           2025-05-27T17:50:59
+================================================================================
+[2025-05-27T17:52:00.421+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    209  0.00s             0           1  0.06s           2025-05-27T17:51:30
+================================================================================
+[2025-05-27T17:52:26.723+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-05-27T17:52:26.743+0000] {manager.py:741} INFO - There are 1 files in /opt/airflow/dags
+[2025-05-27T17:52:30.815+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    214  0.00s             0           1  0.06s           2025-05-27T17:52:00
+================================================================================
+[2025-05-27T17:53:01.188+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    219  0.00s             0           1  0.07s           2025-05-27T17:52:30
+================================================================================
+[2025-05-27T17:53:31.581+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    224  0.00s             0           1  0.06s           2025-05-27T17:53:01
+================================================================================
+[2025-05-27T17:54:02.113+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py                           1           0  0.17s           2025-05-27T17:53:34
+================================================================================
+[2025-05-27T17:54:32.510+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py                           1           0  0.10s           2025-05-27T17:54:05
+================================================================================
+[2025-05-27T17:55:02.970+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py                           1           0  0.10s           2025-05-27T17:54:35
+================================================================================
+[2025-05-27T17:55:33.372+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py                           1           0  0.09s           2025-05-27T17:55:06
+================================================================================
+[2025-05-27T17:56:03.800+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py                           1           0  0.11s           2025-05-27T17:55:36
+================================================================================
+[2025-05-27T17:56:34.195+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py                           1           0  0.10s           2025-05-27T17:56:06
+================================================================================
+[2025-05-27T17:57:04.592+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py                           1           0  0.11s           2025-05-27T17:56:37
+================================================================================
+[2025-05-27T17:57:26.873+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-05-27T17:57:26.901+0000] {manager.py:741} INFO - There are 1 files in /opt/airflow/dags
+[2025-05-27T17:57:35.010+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py                           1           0  0.11s           2025-05-27T17:57:07
+================================================================================
+[2025-05-27T18:01:41.587+0000] {manager.py:469} INFO - Processing files using up to 2 processes at a time 
+[2025-05-27T18:01:41.588+0000] {manager.py:470} INFO - Process each file at most once every 30 seconds
+[2025-05-27T18:01:41.589+0000] {manager.py:471} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-05-27T18:01:41.591+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-05-27T18:01:41.613+0000] {manager.py:741} INFO - There are 1 files in /opt/airflow/dags
+[2025-05-27T18:01:42.159+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/retail_lakehouse_dag.py    164  0.05s             0           0
+================================================================================
+[2025-05-27T18:02:12.500+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    169  0.01s             1           0  0.22s           2025-05-27T18:01:42
+================================================================================
+[2025-05-27T18:02:43.031+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    174  0.00s             1           0  0.25s           2025-05-27T18:02:12
+================================================================================
+[2025-05-27T18:03:13.431+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    181  0.00s             1           0  0.20s           2025-05-27T18:02:43
+================================================================================
+[2025-05-27T18:03:43.806+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    186  0.00s             1           0  0.10s           2025-05-27T18:03:13
+================================================================================
+[2025-05-27T18:04:14.238+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    191  0.00s             1           0  0.10s           2025-05-27T18:03:43
+================================================================================
+[2025-05-27T18:04:44.621+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    196  0.00s             1           0  0.11s           2025-05-27T18:04:14
+================================================================================
+[2025-05-27T18:05:14.993+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    201  0.00s             1           0  0.10s           2025-05-27T18:04:44
+================================================================================
+[2025-05-27T18:05:45.388+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    206  0.00s             1           0  0.09s           2025-05-27T18:05:15
+================================================================================
+[2025-05-27T18:06:15.872+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py                           1           0  0.11s           2025-05-27T18:06:04
+================================================================================
+[2025-05-27T18:06:26.471+0000] {manager.py:451} INFO - Exiting gracefully upon receiving signal 15
+[2025-05-27T18:08:11.686+0000] {manager.py:469} INFO - Processing files using up to 2 processes at a time 
+[2025-05-27T18:08:11.688+0000] {manager.py:470} INFO - Process each file at most once every 30 seconds
+[2025-05-27T18:08:11.690+0000] {manager.py:471} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-05-27T18:08:11.691+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-05-27T18:08:11.697+0000] {manager.py:741} INFO - There are 0 files in /opt/airflow/dags
+[2025-05-27T18:13:38.761+0000] {manager.py:469} INFO - Processing files using up to 2 processes at a time 
+[2025-05-27T18:13:38.762+0000] {manager.py:470} INFO - Process each file at most once every 30 seconds
+[2025-05-27T18:13:38.764+0000] {manager.py:471} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-05-27T18:13:38.765+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-05-27T18:13:38.792+0000] {manager.py:741} INFO - There are 1 files in /opt/airflow/dags
+[2025-05-27T18:13:39.136+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/retail_lakehouse_dag.py    164  0.04s             0           0
+================================================================================
+[2025-05-27T18:14:09.475+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py                           1           0  0.42s           2025-05-27T18:13:39
+================================================================================
+[2025-05-27T18:14:40.169+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    176  0.00s             1           0  0.13s           2025-05-27T18:14:09
+================================================================================
+[2025-05-27T18:15:10.547+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    183  0.00s             1           0  0.10s           2025-05-27T18:14:40
+================================================================================
+[2025-05-27T18:15:40.918+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    188  0.00s             1           0  0.11s           2025-05-27T18:15:10
+================================================================================
+[2025-05-27T18:16:11.336+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    193  0.00s             1           0  0.11s           2025-05-27T18:15:41
+================================================================================
+[2025-05-27T18:16:41.788+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    198  0.00s             1           0  0.11s           2025-05-27T18:16:11
+================================================================================
+[2025-05-27T18:17:12.178+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    203  0.00s             1           0  0.12s           2025-05-27T18:16:41
+================================================================================
+[2025-05-27T18:17:42.677+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    208  0.01s             1           0  0.11s           2025-05-27T18:17:12
+================================================================================
+[2025-05-27T18:18:13.070+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    213  0.00s             1           0  0.13s           2025-05-27T18:17:42
+================================================================================
+[2025-05-27T18:18:39.429+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-05-27T18:18:39.448+0000] {manager.py:741} INFO - There are 1 files in /opt/airflow/dags
+[2025-05-27T18:18:43.536+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    218  0.00s             1           0  0.09s           2025-05-27T18:18:13
+================================================================================
+[2025-05-27T18:19:13.905+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    223  0.01s             1           0  0.10s           2025-05-27T18:18:43
+================================================================================
+[2025-05-27T18:19:44.268+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    228  0.00s             1           0  0.15s           2025-05-27T18:19:14
+================================================================================
+[2025-05-27T18:20:14.733+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    235  0.00s             1           0  0.12s           2025-05-27T18:19:44
+================================================================================
+[2025-05-27T18:20:36.635+0000] {manager.py:451} INFO - Exiting gracefully upon receiving signal 15
+[2025-05-27T18:21:14.486+0000] {manager.py:469} INFO - Processing files using up to 2 processes at a time 
+[2025-05-27T18:21:14.487+0000] {manager.py:470} INFO - Process each file at most once every 30 seconds
+[2025-05-27T18:21:14.488+0000] {manager.py:471} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-05-27T18:21:14.490+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-05-27T18:21:14.515+0000] {manager.py:741} INFO - There are 1 files in /opt/airflow/dags
+[2025-05-27T18:21:14.922+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/retail_lakehouse_dag.py    164  0.04s             0           0
+================================================================================
+[2025-05-27T18:21:45.277+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    169  0.00s             1           0  0.17s           2025-05-27T18:21:15
+================================================================================
+[2025-05-27T18:22:15.711+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    176  0.00s             1           0  0.11s           2025-05-27T18:21:45
+================================================================================
+[2025-05-27T18:22:46.132+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    181  0.00s             1           0  0.10s           2025-05-27T18:22:15
+================================================================================
+[2025-05-27T18:23:16.523+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    186  0.00s             1           0  0.09s           2025-05-27T18:22:46
+================================================================================
+[2025-05-27T18:23:46.913+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    191  0.00s             1           0  0.11s           2025-05-27T18:23:16
+================================================================================
+[2025-05-27T18:24:17.371+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    196  0.00s             1           0  0.10s           2025-05-27T18:23:47
+================================================================================
+[2025-05-27T18:24:47.762+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    201  0.00s             1           0  0.11s           2025-05-27T18:24:17
+================================================================================
+[2025-05-27T18:25:18.195+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    206  0.00s             1           0  0.11s           2025-05-27T18:24:47
+================================================================================
+[2025-05-27T18:25:48.668+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    211  0.00s             1           0  0.11s           2025-05-27T18:25:18
+================================================================================
+[2025-05-27T18:26:15.029+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-05-27T18:26:15.069+0000] {manager.py:741} INFO - There are 1 files in /opt/airflow/dags
+[2025-05-27T18:26:19.247+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    216  0.00s             1           0  0.11s           2025-05-27T18:25:48
+================================================================================
+[2025-05-27T18:26:49.619+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    221  0.00s             1           0  0.14s           2025-05-27T18:26:19
+================================================================================
+[2025-05-27T18:27:20.080+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    228  0.00s             1           0  0.12s           2025-05-27T18:26:49
+================================================================================
+[2025-05-27T18:27:50.953+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    283  0.00s             1           0  0.14s           2025-05-27T18:27:49
+================================================================================
+[2025-05-27T18:29:51.598+0000] {manager.py:469} INFO - Processing files using up to 2 processes at a time 
+[2025-05-27T18:29:51.599+0000] {manager.py:470} INFO - Process each file at most once every 30 seconds
+[2025-05-27T18:29:51.600+0000] {manager.py:471} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-05-27T18:29:51.601+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-05-27T18:29:51.617+0000] {manager.py:741} INFO - There are 1 files in /opt/airflow/dags
+[2025-05-27T18:29:51.739+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/retail_lakehouse_dag.py    163  0.03s             0           0
+================================================================================
+[2025-05-27T18:30:22.095+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    168  0.00s             1           0  0.12s           2025-05-27T18:29:51
+================================================================================
+[2025-05-27T18:30:52.515+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    175  0.00s             1           0  0.11s           2025-05-27T18:30:22
+================================================================================
+[2025-05-27T18:31:22.978+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    180  0.00s             1           0  0.12s           2025-05-27T18:30:52
+================================================================================
+[2025-05-27T18:31:53.336+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    185  0.00s             1           0  0.14s           2025-05-27T18:31:23
+================================================================================
+[2025-05-27T18:32:23.683+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    190  0.00s             1           0  0.09s           2025-05-27T18:31:53
+================================================================================
+[2025-05-27T18:32:54.163+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    195  0.00s             1           0  0.12s           2025-05-27T18:32:23
+================================================================================
+[2025-05-27T18:33:24.524+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    200  0.00s             1           0  0.12s           2025-05-27T18:32:54
+================================================================================
+[2025-05-27T18:33:54.953+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py                           0           1  0.16s           2025-05-27T18:33:43
+================================================================================
+[2025-05-27T18:34:25.487+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py                           0           1  0.07s           2025-05-27T18:34:09
+================================================================================
+[2025-05-27T18:34:52.036+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-05-27T18:34:52.066+0000] {manager.py:741} INFO - There are 1 files in /opt/airflow/dags
+[2025-05-27T18:35:38.886+0000] {manager.py:469} INFO - Processing files using up to 2 processes at a time 
+[2025-05-27T18:35:38.888+0000] {manager.py:470} INFO - Process each file at most once every 30 seconds
+[2025-05-27T18:35:38.889+0000] {manager.py:471} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-05-27T18:35:38.891+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-05-27T18:35:38.908+0000] {manager.py:741} INFO - There are 1 files in /opt/airflow/dags
+[2025-05-27T18:35:38.971+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/retail_lakehouse_dag.py    164  0.03s             0           0
+================================================================================
+[2025-05-27T18:36:09.425+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    184  0.00s             0           1  0.06s           2025-05-27T18:36:06
+================================================================================
+[2025-05-27T18:37:21.724+0000] {manager.py:469} INFO - Processing files using up to 2 processes at a time 
+[2025-05-27T18:37:21.726+0000] {manager.py:470} INFO - Process each file at most once every 30 seconds
+[2025-05-27T18:37:21.727+0000] {manager.py:471} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-05-27T18:37:21.728+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-05-27T18:37:21.748+0000] {manager.py:741} INFO - There are 1 files in /opt/airflow/dags
+[2025-05-27T18:37:21.891+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/retail_lakehouse_dag.py    164  0.03s             0           0
+================================================================================
+[2025-05-27T18:37:52.274+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    169  0.00s             0           1  0.07s           2025-05-27T18:37:21
+================================================================================
+[2025-05-27T18:38:22.716+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py                           0           1  0.06s           2025-05-27T18:38:18
+================================================================================
+[2025-05-27T18:39:36.733+0000] {manager.py:469} INFO - Processing files using up to 2 processes at a time 
+[2025-05-27T18:39:36.735+0000] {manager.py:470} INFO - Process each file at most once every 30 seconds
+[2025-05-27T18:39:36.736+0000] {manager.py:471} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-05-27T18:39:36.737+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-05-27T18:39:36.757+0000] {manager.py:741} INFO - There are 1 files in /opt/airflow/dags
+[2025-05-27T18:39:37.119+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/retail_lakehouse_dag.py    164  0.04s             0           0
+================================================================================
+[2025-05-27T18:40:07.473+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    169  0.00s             0           1  0.08s           2025-05-27T18:39:37
+================================================================================
+[2025-05-27T18:40:37.876+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    174  0.01s             0           1  0.07s           2025-05-27T18:40:07
+================================================================================
+[2025-05-27T18:41:18.032+0000] {manager.py:469} INFO - Processing files using up to 2 processes at a time 
+[2025-05-27T18:41:18.034+0000] {manager.py:470} INFO - Process each file at most once every 30 seconds
+[2025-05-27T18:41:18.035+0000] {manager.py:471} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-05-27T18:41:18.036+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-05-27T18:41:18.056+0000] {manager.py:741} INFO - There are 1 files in /opt/airflow/dags
+[2025-05-27T18:41:18.195+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/retail_lakehouse_dag.py    164  0.03s             0           0
+================================================================================
+[2025-05-27T18:41:48.535+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    171  0.00s             1           0  0.13s           2025-05-27T18:41:18
+================================================================================
+[2025-05-27T18:42:18.946+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    176  0.00s             1           0  0.12s           2025-05-27T18:41:48
+================================================================================
+[2025-05-27T18:42:49.341+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    181  0.00s             1           0  0.10s           2025-05-27T18:42:19
+================================================================================
+[2025-05-27T18:43:19.730+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    186  0.00s             1           0  0.10s           2025-05-27T18:42:49
+================================================================================
+[2025-05-27T18:43:50.188+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    191  0.00s             1           0  0.10s           2025-05-27T18:43:19
+================================================================================
+[2025-05-27T18:44:20.571+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    196  0.00s             1           0  0.10s           2025-05-27T18:43:50
+================================================================================
+[2025-05-27T18:44:51.082+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    201  0.00s             1           0  0.11s           2025-05-27T18:44:20
+================================================================================
+[2025-05-27T18:45:21.473+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    206  0.00s             1           0  0.10s           2025-05-27T18:44:51
+================================================================================
+[2025-05-27T18:45:51.869+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    211  0.00s             1           0  0.10s           2025-05-27T18:45:21
+================================================================================
+[2025-05-27T18:46:18.449+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-05-27T18:46:18.634+0000] {manager.py:741} INFO - There are 1 files in /opt/airflow/dags
+[2025-05-27T18:47:58.070+0000] {manager.py:469} INFO - Processing files using up to 2 processes at a time 
+[2025-05-27T18:47:58.071+0000] {manager.py:470} INFO - Process each file at most once every 30 seconds
+[2025-05-27T18:47:58.073+0000] {manager.py:471} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-05-27T18:47:58.074+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-05-27T18:47:58.095+0000] {manager.py:741} INFO - There are 1 files in /opt/airflow/dags
+[2025-05-27T18:47:58.552+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/retail_lakehouse_dag.py    164  0.06s             0           0
+================================================================================
+[2025-05-27T18:48:28.938+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    169  0.00s             0           1  0.10s           2025-05-27T18:47:58
+================================================================================
+[2025-05-27T18:48:59.637+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    174  0.01s             0           1  0.07s           2025-05-27T18:48:29
+================================================================================
+[2025-05-27T18:49:30.177+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    179  0.00s             0           1  0.46s           2025-05-27T18:49:00
+================================================================================
+[2025-05-27T18:50:00.608+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py                           0           1  0.07s           2025-05-27T18:49:57
+================================================================================
+[2025-05-27T18:51:01.158+0000] {manager.py:469} INFO - Processing files using up to 2 processes at a time 
+[2025-05-27T18:51:01.160+0000] {manager.py:470} INFO - Process each file at most once every 30 seconds
+[2025-05-27T18:51:01.161+0000] {manager.py:471} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-05-27T18:51:01.162+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-05-27T18:51:01.186+0000] {manager.py:741} INFO - There are 1 files in /opt/airflow/dags
+[2025-05-27T18:51:01.344+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/retail_lakehouse_dag.py    164  0.04s             0           0
+================================================================================
+[2025-05-27T18:51:31.741+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    169  0.00s             0           1  0.08s           2025-05-27T18:51:01
+================================================================================
+[2025-05-27T18:52:02.129+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retail_lakehouse_dag.py    174  0.00s             0           1  0.06s           2025-05-27T18:51:31
+================================================================================

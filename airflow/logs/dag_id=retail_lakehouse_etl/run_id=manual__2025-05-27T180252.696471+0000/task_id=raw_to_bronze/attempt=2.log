@@ -1,0 +1,37 @@
+[2025-05-27T18:13:40.213+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: retail_lakehouse_etl.raw_to_bronze manual__2025-05-27T18:02:52.696471+00:00 [queued]>
+[2025-05-27T18:13:40.223+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: retail_lakehouse_etl.raw_to_bronze manual__2025-05-27T18:02:52.696471+00:00 [queued]>
+[2025-05-27T18:13:40.224+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2025-05-27T18:13:40.240+0000] {taskinstance.py:2191} INFO - Executing <Task(DockerOperator): raw_to_bronze> on 2025-05-27 18:02:52.696471+00:00
+[2025-05-27T18:13:40.245+0000] {standard_task_runner.py:60} INFO - Started process 170 to run task
+[2025-05-27T18:13:40.249+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'retail_lakehouse_etl', 'raw_to_bronze', 'manual__2025-05-27T18:02:52.696471+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/retail_lakehouse_dag.py', '--cfg-path', '/tmp/tmpnkgr5ybu']
+[2025-05-27T18:13:40.251+0000] {standard_task_runner.py:88} INFO - Job 9: Subtask raw_to_bronze
+[2025-05-27T18:13:40.267+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-27T18:13:40.309+0000] {task_command.py:423} INFO - Running <TaskInstance: retail_lakehouse_etl.raw_to_bronze manual__2025-05-27T18:02:52.696471+00:00 [running]> on host dc0ac9f11fd7
+[2025-05-27T18:13:40.417+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='retail_lakehouse_etl' AIRFLOW_CTX_TASK_ID='raw_to_bronze' AIRFLOW_CTX_EXECUTION_DATE='2025-05-27T18:02:52.696471+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-27T18:02:52.696471+00:00'
+[2025-05-27T18:13:40.444+0000] {docker.py:486} INFO - Pulling docker image pyspark-etl-app
+[2025-05-27T18:13:42.093+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/api/client.py", line 265, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.10/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http+docker://localhost/v1.47/images/create?tag=latest&fromImage=pyspark-etl-app
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/docker/operators/docker.py", line 488, in execute
+    for output in self.cli.pull(self.image, stream=True, decode=True):
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/api/image.py", line 429, in pull
+    self._raise_for_status(response)
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/api/client.py", line 267, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.ImageNotFound: 404 Client Error for http+docker://localhost/v1.47/images/create?tag=latest&fromImage=pyspark-etl-app: Not Found ("pull access denied for pyspark-etl-app, repository does not exist or may require 'docker login'")
+[2025-05-27T18:13:42.100+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=retail_lakehouse_etl, task_id=raw_to_bronze, execution_date=20250527T180252, start_date=20250527T181340, end_date=20250527T181342
+[2025-05-27T18:13:42.111+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 9 for task raw_to_bronze (404 Client Error for http+docker://localhost/v1.47/images/create?tag=latest&fromImage=pyspark-etl-app: Not Found ("pull access denied for pyspark-etl-app, repository does not exist or may require 'docker login'"); 170)
+[2025-05-27T18:13:42.138+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-05-27T18:13:42.160+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

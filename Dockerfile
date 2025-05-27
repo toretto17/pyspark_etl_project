@@ -2,7 +2,7 @@
 
 # Use a pre-built Spark image that includes Python and Java
 # Bitnami images are excellent for this as they are well-maintained.
-FROM bitnami/spark:3.5.0-debian-11-r25
+FROM bitnami/spark:3.4.2-debian-11-r10
 
 # Switch to root temporarily to install system-level dependencies.
 # This is required for `apt-get` commands.
@@ -11,8 +11,12 @@ USER root
 # Update apt package lists and install Python3 and pip3.
 # `rm -rf /var/lib/apt/lists/*` cleans up the apt cache to keep image size small.
 RUN apt-get update && \
-    apt-get install -y python3 python3-pip && \
+    apt-get install -y python3 python3-pip wget && \
     rm -rf /var/lib/apt/lists/*
+
+# Download Delta Lake JAR and put it into Spark jars directory
+# RUN wget https://repo1.maven.org/maven2/io/delta/delta-core_2.12/2.4.0/delta-core_2.12-2.4.0.jar -P /opt/bitnami/spark/jars/
+
 
 # Set the working directory inside the container.
 # All subsequent COPY/RUN commands will operate relative to this directory.

@@ -1,4 +1,5 @@
 from pyspark.sql import SparkSession
+import os
 
 if __name__ == "__main__":
     # Create a SparkSession
@@ -30,6 +31,11 @@ if __name__ == "__main__":
     results = word_counts.collect()
     for word, count in results:
         print(f"Word: '{word}', Count: {count}")
+
+
+    print("👀 Listing files in /app/data/input:")
+    print('*********',os.listdir("/app/data/input"))
+
 
     # Stop the SparkSession
     spark.stop()
