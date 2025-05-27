@@ -1,5 +1,5 @@
 from pyspark.sql import SparkSession
-import os
+import os # KEEP THIS LINE
 
 if __name__ == "__main__":
     # Create a SparkSession
@@ -10,7 +10,6 @@ if __name__ == "__main__":
     .config("spark.driver.memory", "1g") \
     .getOrCreate()
 
-    
     # Some sample data (you could read from a file, S3, etc. in a real project)
     data = [
         "Hello Spark",
@@ -32,10 +31,8 @@ if __name__ == "__main__":
     for word, count in results:
         print(f"Word: '{word}', Count: {count}")
 
-
-    print("👀 Listing files in /app/data/input:")
-    print('*********',os.listdir("/app/data/input"))
-
+    print("👀 Listing files in /app/data/input:") # KEEP THESE LINES
+    print('*********',os.listdir("/app/data/input")) # KEEP THESE LINES
 
     # Stop the SparkSession
     spark.stop()
