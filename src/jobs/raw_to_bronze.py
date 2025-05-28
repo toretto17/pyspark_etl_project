@@ -1,73 +1,76 @@
-# src/jobs/raw_to_bronze.py
+# File: src/jobs/raw_to_bronze.py
 
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, trim
+from pyspark.sql.functions import col, trim, lit
 from pyspark.sql.types import StructType, StructField, StringType, IntegerType, DoubleType, TimestampType
-from delta import configure_spark_with_delta_pip
+# --- MODIFIED: Removed 'from delta import configure_spark_with_delta_pip' ---
+from datetime import datetime
+import logging
 
-
-def is_valid_invoice(invoice):
-    try:
-        int(invoice)
-        return True
-    except:
-        return False
-
+# Configure basic logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def main():
-    # Setup Spark session with Delta
+    logging.info("Starting Raw to Bronze ETL job.")
+
+    # Setup Spark session manually, relying on spark-submit for JARs/extensions
     builder = SparkSession.builder \
         .appName("RawToBronzeJob") \
-        .master("spark://spark-master:7077") \
-        .config("spark.jars.packages", "io.delta:delta-core_2.12:2.4.0,io.delta:delta-storage:2.4.0") \
         .config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension") \
-        .config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog")
-    
-    
+        .config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog") \
+        .config("spark.databricks.delta.autoCompact.enabled", "true") \
+        .config("spark.databricks.delta.optimizeWrite.enabled", "true")
 
-    spark = configure_spark_with_delta_pip(builder).getOrCreate()
+    # --- MODIFIED: Changed this line ---
+    spark = builder.getOrCreate() # Rely on spark-submit's --jars and --conf for Delta capabilities
 
-    spark.sparkContext.setLogLevel("ERROR") # Or "WARN", "INFO", "DEBUG", "TRACE"
-                                        # Start with "WARN" or "INFO" to see more details
+    # Set Spark log level - "WARN" is good for production to see warnings but not too much INFO
+    spark.sparkContext.setLogLevel("WARN")
+    logging.info(f"SparkSession created. Spark version: {spark.version}")
 
-    # File paths
+    # File paths (read from MinIO S3A, write to MinIO S3A)
     raw_path = "s3a://retail-lakehouse/raw/online_retail.csv"
     bronze_path = "s3a://retail-lakehouse/bronze/online_retail_bronze"
 
-
+    # Define schema explicitly for robust CSV reading
     csv_schema = StructType([
-        StructField("invoice_no", StringType(), True),
-        StructField("stock_code", StringType(), True),
-        StructField("description", StringType(), True),
-        StructField("qty", IntegerType(), True),
-        StructField("invoice_date", StringType(), True), # Keep as StringType for now if parsing as timestamp is done later
-        StructField("unit_price", DoubleType(), True),
-        StructField("customer_id", IntegerType(), True),
-        StructField("country", StringType(), True)
+        StructField("InvoiceNo", StringType(), True),
+        StructField("StockCode", StringType(), True),
+        StructField("Description", StringType(), True),
+        StructField("Quantity", IntegerType(), True),
+        StructField("InvoiceDate", StringType(), True), # Keep as StringType for raw
+        StructField("UnitPrice", DoubleType(), True),
+        StructField("CustomerID", IntegerType(), True),
+        StructField("Country", StringType(), True)
     ])
 
-    print(f"Reading from: {raw_path}")
+    try:
+        logging.info(f"Reading raw data from: {raw_path}")
+        df_raw = spark.read.csv(raw_path, header=True, schema=csv_schema)
+        logging.info("Raw data schema:")
+        df_raw.printSchema()
 
-    # Read raw CSV
-    df_raw = spark.read.csv(raw_path, header=True, schema=csv_schema)
+        # Data cleaning and validation rules
+        df_cleaned = df_raw.dropna(subset=["InvoiceNo", "StockCode", "CustomerID", "Quantity", "UnitPrice"])
+        df_cleaned = df_cleaned.filter(
+            (col("InvoiceNo").rlike("^[0-9]+$")) &
+            (col("StockCode").rlike("^[A-Za-z0-9]+$")) &
+            (col("Quantity").isNotNull()) & (col("Quantity") > 0) &
+            (col("UnitPrice").isNotNull()) & (col("UnitPrice") > 0)
+        )
+        df_cleaned = df_cleaned.withColumn("processing_timestamp", lit(datetime.now()))
 
-    df_cleaned = df_raw.dropna(subset=["invoice_no", "stock_code", "customer_id"])
+        logging.info(f"Writing cleaned data to Bronze Delta table at: {bronze_path}")
+        df_cleaned.write.format("delta").mode("overwrite").save(bronze_path)
+        logging.info(f"✅ Bronze data written successfully to {bronze_path}")
 
-    # Data cleaning rules
-    
-    df_cleaned = df_raw.filter(
-        (col("invoice_no").rlike("^[0-9]+$")) &
-        (col("stock_code").rlike("^[A-Z0-9]+$")) &
-        (col("qty").isNotNull()) & (col("qty") > 0) &
-        (col("unit_price").isNotNull()) & (col("unit_price") > 0)
-    )
+    except Exception as e:
+        logging.error(f"Error during Raw to Bronze ETL: {e}", exc_info=True)
+        raise # Re-raise the exception to make Airflow task fail
 
-    print(f"Writing to: {bronze_path}")
-    df_cleaned.write.format("delta").mode("overwrite").save(bronze_path)
-
-    print(f"✅ Bronze data written to {bronze_path}")
-    spark.stop()
-
+    finally:
+        spark.stop()
+        logging.info("SparkSession stopped for Raw to Bronze.")
 
 if __name__ == "__main__":
     main()

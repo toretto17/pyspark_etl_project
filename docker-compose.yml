@@ -15,6 +15,8 @@ services:
       - "8080:8080"
     volumes:
       - ./data:/app/data
+    networks: # <--- ADD THIS
+      - retail_lakehouse_network # <--- USE A CONSISTENT NETWORK NAME
 
   spark-worker-1:
     image: bitnami/spark:3.4.2-debian-11-r10
@@ -28,6 +30,8 @@ services:
       - "8081:8081"
     volumes:
       - ./data:/app/data
+    networks: # <--- ADD THIS
+      - retail_lakehouse_network
 
   minio:
     image: minio/minio:RELEASE.2023-12-23T07-19-11Z
@@ -41,6 +45,8 @@ services:
       - "9001:9001"
     volumes:
       - minio-data:/data
+    networks: # <--- ADD THIS
+      - retail_lakehouse_network
 
   minio-client:
     image: minio/mc
@@ -54,6 +60,8 @@ services:
         mc mb -p local/retail-lakehouse && \
         mc policy set download local/retail-lakehouse && \
         tail -f /dev/null"
+    networks: # <--- ADD THIS
+      - retail_lakehouse_network
 
   spark-app:
     build: .
@@ -68,24 +76,8 @@ services:
     environment:
       - AWS_ACCESS_KEY_ID=admin
       - AWS_SECRET_ACCESS_KEY=password123
-    # command:
-    #   - "--master"
-    #   - "spark://spark-master:7077"
-    #   - "--deploy-mode"
-    #   - "client"
-    #   - "--packages"
-    #   - "io.delta:delta-core_2.12:2.4.0,io.delta:delta-storage:2.4.0,org.apache.hadoop:hadoop-aws:3.3.1"
-    #   - "--conf"
-    #   - "spark.hadoop.fs.s3a.endpoint=http://minio:9000"
-    #   - "--conf"
-    #   - "spark.hadoop.fs.s3a.access.key=admin"
-    #   - "--conf"
-    #   - "spark.hadoop.fs.s3a.secret.key=password123"
-    #   - "--conf"
-    #   - "spark.hadoop.fs.s3a.path.style.access=true"
-    #   - "--conf"
-    #   - "spark.hadoop.fs.s3a.impl=org.apache.hadoop.fs.s3a.S3AFileSystem"
-    #   - "src/jobs/silver_to_gold.py"
+    networks: # <--- ADD THIS
+      - retail_lakehouse_network
 
   postgres:
     image: postgres:13
@@ -96,6 +88,8 @@ services:
       POSTGRES_DB: airflow
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
+    networks: # <--- ADD THIS
+      - retail_lakehouse_network
 
   airflow-webserver:
     image: apache/airflow:2.8.1-python3.10
@@ -105,19 +99,21 @@ services:
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-      AIRFLOW__CORE__FERNET_KEY: ''
+      AIRFLOW__CORE__FERNET_KEY: 'qPt4eaBWueI7TXLWsprvhtnMNFpKU77UgG0VtTQlMX4=' # <--- UPDATE THIS!
       AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
       AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth'
     volumes:
       - ./airflow/dags:/opt/airflow/dags
       - ./airflow/logs:/opt/airflow/logs
       - ./airflow/plugins:/opt/airflow/plugins
-      - /var/run/docker.sock:/var/run/docker.sock
-      - .:/app    
+      - /var/run/docker.sock:/var/run/docker.sock # This is essential for DockerOperator
+      - .:/app
     ports:
       - "8089:8080"
     command: webserver
     restart: always
+    networks: # <--- ADD THIS
+      - retail_lakehouse_network
 
   airflow-scheduler:
     image: apache/airflow:2.8.1-python3.10
@@ -127,17 +123,22 @@ services:
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-      AIRFLOW__CORE__FERNET_KEY: ''
+      AIRFLOW__CORE__FERNET_KEY: 'qPt4eaBWueI7TXLWsprvhtnMNFpKU77UgG0VtTQlMX4=' # <--- UPDATE THIS!
     volumes:
       - ./airflow/dags:/opt/airflow/dags
       - ./airflow/logs:/opt/airflow/logs
       - ./airflow/plugins:/opt/airflow/plugins
-      - /var/run/docker.sock:/var/run/docker.sock
-      - .:/app    
-
+      - /var/run/docker.sock:/var/run/docker.sock # Essential for DockerOperator
+      - .:/app
     command: scheduler
     restart: always
+    networks: # <--- ADD THIS
+      - retail_lakehouse_network
 
 volumes:
   minio-data:
   postgres-db-volume:
+
+networks: # <--- ADD THIS SECTION AT THE END OF THE FILE
+  retail_lakehouse_network:
+    driver: bridge # default driver for local setups
